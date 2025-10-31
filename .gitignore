@@ -1,0 +1,14 @@
+# Results and output files
+*.json
+*.html
+results/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
