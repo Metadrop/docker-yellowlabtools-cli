@@ -7,35 +7,33 @@ Docker container for [YellowLabTools](https://github.com/YellowLabTools/YellowLa
 Pull the image from GitHub Container Registry:
 
 ```bash
-docker pull ghcr.io/OWNER/yellowlabs-cli-docker:latest
+docker pull ghcr.io/metadrop/docker-yellowlabtools-cli:latest
 ```
-
-Replace `OWNER` with your GitHub username or organization.
 
 ### Run an analysis
 
 ```bash
-docker run --rm ghcr.io/OWNER/yellowlabs-cli-docker:latest yellowlabtools https://example.com
+docker run --rm ghcr.io/metadrop/docker-yellowlabtools-cli:latest https://example.com
 ```
 
 ### Save results to a file
 
 ```bash
-docker run --rm -v $(pwd):/output ghcr.io/OWNER/yellowlabs-cli-docker:latest \
+docker run --rm -v $(pwd):/output ghcr.io/metadrop/docker-yellowlabtools-cli:latest \
   yellowlabtools https://example.com --output /output/report.json
 ```
 
 ### Interactive mode
 
 ```bash
-docker run --rm -it ghcr.io/OWNER/yellowlabs-cli-docker:latest /bin/bash
+docker run --rm -it ghcr.io/metadrop/docker-yellowlabtools-cli:latest /bin/bash
 ```
 
 ## Building locally
 
 ```bash
 docker build -t yellowlabtools .
-docker run --rm yellowlabtools yellowlabtools https://example.com
+docker run --rm yellowlabtools https://example.com
 ```
 
 ## CI/CD
